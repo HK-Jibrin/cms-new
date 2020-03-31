@@ -1,46 +1,125 @@
-
 <template>
-<div>
-   <Header/>
-   <div v-for = "product in products" :key="product.productId" >
-     <div v-if="productId == product.productId">
-       <div class="card flex-row flex-wrap">
-        <div class="card-header border-0">
-        <img :src="product.imageLink" height="400" alt="">
-        <div id="small">
-          <img :src="product.imageLink1" height="70"> &nbsp;
-         <img :src="product.imageLink2" height="70"> &nbsp;
-        <img :src="product.imageLink3" height="70">
-        </div>
-        </div>
-        <div id="space" class="card-block px-2">
-            <h4 class="card-title">{{product.name}}</h4>
+  <div class="about">
+     <Header/> 
+  <!--Main layout-->
+    <b-container class="bv-example-row" fluid>
+    <b-row>
+     <b-col cols="9" class="main" >
+  <main class="mt-5 pt-4" v-for = "product in products" :key="product.productId"  >
+    <div class="container dark-grey-text mt-5" v-if="productId == product.productId">
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <img :src="product.imageLink" height="400" alt=""></div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4">
+
+          <!--Content-->
+          <div class="p-4">
+
+            <div class="mb-3">
+              <a href="">
+                <h1>{{product.name}}</h1><br><br>
+              </a>
+              <a>
             <label for="rating-1"><i class="fas fa-3x fa-star"></i></label>
             <label for="rating-2"><i class="fas fa-3x fa-star"></i></label>
             <label for="rating-3"><i class="fas fa-3x fa-star"></i></label>
             <label for="rating-4"><i class="fas fa-3x fa-star"></i></label>
-            <h4>{{ product.price}}</h4>
-           <a class="boo" text-variant="black">ADD TO CART <i class="fas fa-shopping-cart"></i></a>
+              </a><br><br>
+            </div>
+             <p class="lead">
+              <span class="mr-1">
+                <h1>&#8358; {{ product.price}}</h1>
+                </span>
+              </p>
+
+            <form class="d-flex justify-content-left">
+              <!-- Default input -->
+              <button id="boo" type="submit">Add to cart
+                <i class="fas fa-shopping-cart ml-1"></i>
+              </button>
+
+            </form>
+
+          </div>
+          <!--Content-->
+
         </div>
-        <div class="w-100"></div>
-        <div class="card-footer">
-          <h1>Product Details</h1>
-           <p class="card-text">{{product.Description}}</p>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+      <hr>
+
+      <!--Grid row-->
+     
+      <!--Grid row-->
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-lg-2col-md-12 mb-2">
+     <img :src="product.imageLink1" height="90">
         </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-2">
+         <img :src="product.imageLink2" height="90">
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-0 col-md-0 mb-2">
+
+         <img :src="product.imageLink3 " height="90">
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+ <div class="row d-flex justify-content-center wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-0 text-left">
+
+          <h4 class="my-4 h4">Product Details</h4>
+
+          <p>{{product.Description}}</p>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
     </div>
-     </div>
-   </div>
-   <Footer/>
+  </main>
+  </b-col>
+  <!--Main layout-->
+   <b-col cols="3"><Infor/></b-col>
+  </b-row>
+  </b-container>
+  <div><Footer/></div>
   </div>
 </template>
 <script>
 import Header from '../components/Header.vue'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer.vue'
+import Infor from '../components/Infor.vue'
  export default{
      name: 'product',
      components: {
           Header,
-         Footer
+         Footer,
+         Infor
       
       },
 
@@ -64,7 +143,7 @@ import Footer from '../components/Footer'
 #second{
    display: inline;
   }
-  .boo{
+  #boo{
      background-color: #f68b1e;
     width: 200%;
     height: 42px;

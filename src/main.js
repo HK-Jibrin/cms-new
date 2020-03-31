@@ -12,8 +12,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 
 Vue.config.productionTip = false
 Vue.use(VueCarousel);
-Vue.use(BootstrapVue)
-// Vue.use(BootstrapVue);
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
 
 new Vue({
   store,

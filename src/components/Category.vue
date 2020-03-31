@@ -1,8 +1,8 @@
 <template>
-  <div class="category">
-<ul class="list-group">
-  <li class="list-group-item disabled">{{ category.name}}</li>
-</ul>
+<div class="category">
+<b-list-group>
+  <b-list-group-item > {{ category.name }}</b-list-group-item>
+</b-list-group>
 </div>
 </template>
 <script>
@@ -14,9 +14,10 @@ export default {
 </script>
 
 <style>
-.list-group{
-    width: 50%;
-    height: 50px;
+.category{
+    height: 53px;
+     margin-left: 5em;
+    
    
 }
 </style>

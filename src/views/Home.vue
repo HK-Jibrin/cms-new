@@ -1,17 +1,18 @@
+
 <template>
-  <div class="home">
-  <Header/>
-  <div class="container">
-  <div class="row">
-    <div class="col-md-4" id="cat" with= 50s%><category v-for="cat in categories" :key="cat.id" :category="cat"/></div>
-    <div class="col-md-8"><Carousel/></div>
-  </div>
-    </div>  
-  <div class="items">
-    <Product v-for="item in products" :key="item.id" :products="item" />
-  </div> 
-   <Footer/>
-  </div>
+<div class="home">
+    <Header/>
+<b-container class="bv-example-row" fluid>
+  <b-row>
+    <b-col cols = "3" class="caty"><category v-for="cat in categories" :key="cat.id" :category="cat"/></b-col>
+    <b-col cols ="9 "><div id="cal"><Carousel /></div></b-col>
+    </b-row>
+</b-container>
+      <div class="upd "><Product v-for="item in products" :key="item.id" :products="item" /></div>
+      <div>
+        <Footer/>
+      </div>
+</div>
 </template>
 <script>
 // @ is an alias to /src
@@ -20,9 +21,14 @@ import Category from '@/components/Category.vue'
 import Product from '@/components/Product.vue'
 import Carousel from '../components/Carousel.vue'
 import Footer from '@/components/Footer.vue'
-
+import {mapState} from "vuex"
 export default {
   name: 'Home',
+   computed:{
+       ...mapState([
+           'products'
+       ])
+   },
   components: {
    Header,
    Category,
@@ -68,68 +74,6 @@ export default {
             }
         ],
 
-    products: [
-        {
-        id: 1,
-        imageLink: require("../assets/Gwogon.jpg") ,
-        name: 'G-wagon',
-        price: '200 million'
-        },
-         {
-         id: 2,
-         imageLink: require("../assets/made1.jpg") ,
-        name: 'Made in Nigeria',
-        price: 800000
-         },
-        {
-        id: 3,
-        imageLink: require("../assets/made2.jpg") ,
-        name: 'Sport car made in Nigeria',
-        price: '3.6 million'
-        },
-        {
-        id: 4,
-        imageLink: require("../assets/Suv.jpg") ,
-        name: 'SUV',
-        price: '20 million'
-        },
-        {
-        id: 6,
-        imageLink: require("../assets/made4_640.jpg") ,
-        name: 'Toyota Mirai',
-        price: '120 million'
-        },
-        {
-        id: 7,
-        imageLink: require("../assets/range.jpg") ,
-        name: 'Range Rover',
-        price: '150 million'
-        },
-        {
-        id: 8,
-        imageLink: require("../assets/powerbike.jpg") ,
-        name: 'Power Bike',
-        price: '15 million'
-        },
-        {
-        id: 9,
-        imageLink: require("../assets/flying.jpg") ,
-        name: 'Flying Spur',
-        price: '350 million'  
-        },
-         {
-        id: 10,
-        imageLink: require("../assets/benz.jpg"),
-        name: 'Mercedees benz c300',
-        price: '75.7 million'
-        },{
-        id: 11,
-        imageLink: require("../assets/suzukibrezza.jpg") ,
-        name: 'Suzuki Brezza',
-        price: '25.9 million'
-        },
-    ]
-
     }
   }
 
@@ -138,19 +82,17 @@ export default {
 
 <style>
 
-.down{
-  margin: 0px;
-}
+.upd{
+ margin-left: 90px;
+ }
 .container{
  margin-top: 10px;
+ margin-left: 5px;
 }
-.items{
-  display: inline;
+#caty{
+ margin-left:50px;
 }
-#cat{
-  padding: 4px;
-  float: left;
-
+.row{
+  margin-left: 5px;
 }
-
 </style>
