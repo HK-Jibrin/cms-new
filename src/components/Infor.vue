@@ -50,12 +50,6 @@
 .goo{
   width: 50%;
 }
-    /* .btn{
-        background-color: ; */
-        /* font-size: 18px;
-        font-weight: 100;
-        color: rgba(7, 136, 153, 0.932);
-    } */
     .btn :hover{
         background-color: rgba(7, 136, 153, 0.932);
         color: whitesmoke;

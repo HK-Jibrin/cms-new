@@ -1,26 +1,15 @@
 <template>
   <div class="about">
      <Header/> 
-  <!--Main layout-->
     <b-container class="bv-example-row" fluid>
     <b-row>
      <b-col cols="9" class="main" >
   <main class="mt-5 pt-4" v-for = "product in products" :key="product.productId"  >
     <div class="container dark-grey-text mt-5" v-if="productId == product.productId">
-
-      <!--Grid row-->
       <div class="row wow fadeIn">
-
-        <!--Grid column-->
         <div class="col-md-6 mb-4">
-
-          <img :src="product.imageLink" height="400" alt=""></div>
-        <!--Grid column-->
-
-        <!--Grid column-->
+       <img :src="product.imageLink" height="400" alt=""></div>
         <div class="col-md-6 mb-4">
-
-          <!--Content-->
           <div class="p-4">
 
             <div class="mb-3">
@@ -39,71 +28,35 @@
                 <h1>&#8358; {{ product.price}}</h1>
                 </span>
               </p>
-
             <form class="d-flex justify-content-left">
-              <!-- Default input -->
               <button id="boo" type="submit">Add to cart
                 <i class="fas fa-shopping-cart ml-1"></i>
               </button>
-
             </form>
-
-          </div>
-          <!--Content-->
-
-        </div>
-        <!--Grid column-->
-
+             </div>
+         </div>
       </div>
-      <!--Grid row-->
-
-      <hr>
-
-      <!--Grid row-->
-     
-      <!--Grid row-->
-
-      <!--Grid row-->
+       <hr>
       <div class="row wow fadeIn">
-
-        <!--Grid column-->
         <div class="col-lg-2col-md-12 mb-2">
      <img :src="product.imageLink1" height="90">
         </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
         <div class="col-lg-2 col-md-6 mb-2">
          <img :src="product.imageLink2" height="90">
         </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
         <div class="col-lg-0 col-md-0 mb-2">
-
          <img :src="product.imageLink3 " height="90">
         </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
- <div class="row d-flex justify-content-center wow fadeIn">
-
-        <!--Grid column-->
-        <div class="col-md-0 text-left">
-
-          <h4 class="my-4 h4">Product Details</h4>
-
-          <p>{{product.Description}}</p>
-
+       </div>
+       <div class="row d-flex justify-content-center wow fadeIn">
+       <div class="col-md-0 text-left">
+       <h4 class="my-4 h4">Product Details</h4>
+       <p>{{product.Description}}</p>
         </div>
-        <!--Grid column-->
-
-      </div>
+       </div>
     </div>
   </main>
   </b-col>
-  <!--Main layout-->
    <b-col cols="3"><Infor/></b-col>
   </b-row>
   </b-container>

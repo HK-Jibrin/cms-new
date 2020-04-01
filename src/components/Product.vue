@@ -30,7 +30,7 @@ export default {
     padding-top: 20px;
     background-color: whitesmoke;
     border-radius: 20px;
-     margin: 10px 0px 0px 0px; 
+    margin: 10px 0px 0px 0px; 
 }
 .pro{
   width: 300px; 
