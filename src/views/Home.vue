@@ -5,7 +5,7 @@
 <b-container class="bv-example-row" fluid>
   <b-row>
     <b-col cols = "3" class="caty"><category v-for="cat in categories" :key="cat.id" :category="cat"/></b-col>
-    <b-col cols ="9 "><div id="cal"><Carousel /></div></b-col>
+    <b-col cols ="9 "><div id="cal"><Carousel/></div></b-col>
     </b-row>
 </b-container>
       <div class="upd "><Product v-for="item in products" :key="item.id" :products="item" /></div>

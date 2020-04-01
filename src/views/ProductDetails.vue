@@ -8,7 +8,7 @@
     <div class="container dark-grey-text mt-5" v-if="productId == product.productId">
       <div class="row wow fadeIn">
         <div class="col-md-6 mb-4">
-       <img :src="product.imageLink" height="400" alt=""></div>
+       <img :src="product.imageLink" height="400" alt="" style="width: 100%"></div>
         <div class="col-md-6 mb-4">
           <div class="p-4">
 
